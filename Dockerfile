@@ -8,7 +8,7 @@ RUN mkdir /root/upload
 # Adding backend to container
 ADD target/service-espace-collaborateur*.jar /app.jar
 
-CMD [ "java", "-jar", "/app.jar", "-Dspring.profiles.active=prod" ]
+CMD [ "java", "-Dspring.profiles.active=prod", "-jar", "/app.jar" ]
 
 # Exposing container port for binding with host
-EXPOSE 8081
+EXPOSE 8083
